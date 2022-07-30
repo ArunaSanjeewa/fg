@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
-import "./App.css";
+// import "./App.css";
+import "antd/dist/antd.css";
 import { Col, Row, Image } from "antd";
 import React from "react";
 
@@ -7,23 +8,39 @@ function App() {
   return (
     <div className="App">
       <>
-        <Row>
-          <Col span={8}>
-            <Image src="../images/Rectangle480.png" />
-          </Col>
-          <Col span={4}>
+        {/* <Row>
+          <Col span={24}>
             {" "}
-            <Image src="../images/Rectangle480.png" />
+            <Image src="../images/22.png" />
+          </Col>
+        </Row> */}
+        <Row justify="center">
+          <Col span={18}>
+            {" "}
+           
+          </Col>
+          <Col span={6}>
+          <Image  src="../images/Rectangle480.png" />
+            {/* <Image src="../images/16.png" /> */}
           </Col>
         </Row>
         <Row>
-          <Col span={12}>col-12</Col>
-          <Col span={12}>col-12</Col>
-        </Row>
-        <Row>
-          <Col span={8}>col-8</Col>
-          <Col span={8}>col-8</Col>
-          <Col span={8}>col-8</Col>
+          <Col span={18}>
+            {" "}
+            <h2>Download the app to add
+
+places to save places
+
+you like</h2>
+            {/* <Image src="../images/23.png" /> */}
+          </Col>
+          {/* <Col span={8}>
+            <Image src="../images/39.png" />
+          </Col> */}
+          <Col span={6}>
+            {" "}
+            <Image src="../images/41.png" />
+          </Col>
         </Row>
         <Row>
           <Col span={6}>col-6</Col>
