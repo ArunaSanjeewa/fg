@@ -2,11 +2,17 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Col, Row, Image } from "antd";
 import React from "react";
+import NavBarWeb from './Components/Navbar/NavBarWeb';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
       <>
+      <NavBarWeb/>
+      <Row>
+      
+      </Row>
         <Row>
           <Col span={8}>
             <Image src="../images/Rectangle480.png" />
