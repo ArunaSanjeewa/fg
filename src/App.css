@@ -38,7 +38,7 @@
 }
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 2px 0;
+  padding: 0px 0;
   position: sticky;
   width: 100%;
   top: 0;
@@ -59,9 +59,9 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #3F3F3F !important;
   letter-spacing: 0.8px;
   padding: 12px 25px;
-  font-size: 20px;
+  font-size: 16px;
   opacity: 0.75;
-  font-family: 'Outfit';
+  
 font-style: normal;
 font-weight: 500;
 
