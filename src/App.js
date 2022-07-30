@@ -1,9 +1,10 @@
 import logo from "./logo.svg";
-// import "./App.css";
+import "./App.css";
 import "antd/dist/antd.css";
 import { Col, Row, Image } from "antd";
 import React from "react";
 import NavBarWeb from "./Components/Navbar/NavBarWeb";
+import FooterWeb from "./Components/Footer/FooterWeb";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Col span={6}>col-6</Col>
           <Col span={6}>col-6</Col>
         </Row>
+        <FooterWeb/>
       </>
     </div>
   );

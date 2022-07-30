@@ -50,10 +50,10 @@ function NavBarWeb() {
             <Nav.Link href="#deals" className={activeLink === 'deals' ? 'active navbar-link underline' : 'navbar-link'} onClick={() => onUpdateActiveLink('deals')}>Deals</Nav.Link>
             
           </Nav>
-          <Nav>
+          <Nav >
             
-            <Nav.Link eventKey={2} href="#memes">
-            <Button variant="success">Download </Button>{' '}
+            <Nav.Link eventKey={2} href="#memes" >
+            <Button  variant="success" className='button-size'>Download </Button>{' '}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
