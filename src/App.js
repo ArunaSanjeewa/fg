@@ -62,24 +62,41 @@ function App() {
                 places around your next adventure and add them to your bucket
                 list. Find the best services you need in your area in seconds.
               </p>
-              <Button type="primary" style={{textAlign:'left'}}>
+              <Button type="primary" style={{ textAlign: "left" }}>
                 Google Play
               </Button>
-              <Button type="primary" >
-                App Store
-              </Button>
+              <Button type="primary">App Store</Button>
             </Col>
 
             <Col span={12}>
-              {/* <div className="img2"></div> */}
-              <img src="../images/41.png" className="img2" />
+              <img alt="41" src="../images/41.png" className="img2" />
             </Col>
           </Row>
           <Row>
-            <Col span={6}>col-6</Col>
-            <Col span={6}>col-6</Col>
-            <Col span={6}>col-6</Col>
-            <Col span={6}>col-6</Col>
+            <Col span={12}>
+              <img alt="41" src="../images/16.png" className="img3" />
+            </Col>
+            <Col span={12}>
+              <div style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}>
+                Short Title
+              </div>
+
+              <div
+                style={{
+                  textAlign: "left",
+                  fontSize: "45px",
+                  
+                  fontWeight: 700,
+                }}
+              >
+                Description about app screen
+              </div>
+              <div style={{ textAlign: "left", fontSize: "25px" }}>
+                Explore places around your next adventure and add them to your
+                bucket list, Tempor incididunt utlabore et dolore magna aliqua.
+                Ut enim adminim veniam quis nostrud exercitation.
+              </div>
+            </Col>
           </Row>
         </div>
       </>
