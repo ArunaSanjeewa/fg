@@ -48,8 +48,12 @@ function NavBarWeb() {
             <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link underline' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Hidden Gems</Nav.Link>
             <Nav.Link href="#link" className={activeLink === 'link' ? 'active navbar-link underline' : 'navbar-link'} onClick={() => onUpdateActiveLink('link')}>Planner</Nav.Link>
             <Nav.Link href="#deals" className={activeLink === 'deals' ? 'active navbar-link underline' : 'navbar-link'} onClick={() => onUpdateActiveLink('deals')}>Deals</Nav.Link>
+           
             
           </Nav>
+          {/* <Nav>
+
+          </Nav> */}
           <Nav >
             
             <Nav.Link eventKey={2} href="#memes" >

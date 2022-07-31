@@ -1,12 +1,20 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "antd/dist/antd.css";
-
-import { Col, Row, Image, Button } from "antd";
+import { Col, Row, Image } from "antd";
 import React from "react";
 import NavBarWeb from "./Components/Navbar/NavBarWeb";
 import FooterWeb from "./Components/Footer/FooterWeb";
+import MapView from "./Components/Map/MapView";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import hart from '../src/assets/hart.svg';
+import left_arrow from '../src/assets/left_arrow.svg';
+import right_arrow from '../src/assets/right_arrow.svg';
+
+
 
 
 function App() {
@@ -22,28 +30,74 @@ function App() {
         </Row> */}
 
         <div class="container set-container">
-          <Row>
-          <Col xs={24} xl={15}  ></Col>
-          <Col xs={24} xl={9}  >
-              <img alt="480" src="../images/Rectangle480.png" class="img-fluid" />
-              <h4
-                style={{ textAlign: "left", fontSize: "30px" }} // className="txt1"
-              >
-                Butterfly Creek
-              </h4>
-              <div style={{ textAlign: "left", fontSize: "20px" }}>
-                10 Tom Pearce Drive, Auckland Airport
-              </div>
-              <p style={{ textAlign: "left", fontSize: "14px" }}>
-                Welcome and immerse yourself in our tropical butterfly house or
-                travel back in time in Dinosaur Kindom when Dinosaurs Kindom
-                when Dinosars ruled. Meet Scar and Goldie, NZ’s only salt water
-                crocodiles.
-              </p>
+          <Row >
+            <Col xs={24} xl={15} span={15}>
+              <MapView />
+            </Col>
+            <Col xs={24} xl={1} span={15}>
+
+            </Col>
+            <Col xs={24} xl={8} span={9}>
+              <Row className="side-row">
+
+                <Col xs={24}>
+                  <InputGroup className="">
+
+                    <Form.Control
+
+                      aria-label="Recipient's username"
+                      aria-describedby="basic-addon1"
+                    />
+                    <Button variant="success" style={{ fontSize: 13 }} id="button-addon1">
+
+                      Search
+                    </Button>
+                  </InputGroup>
+                </Col>
+                <Col xs={24} className="first-image-view">
+                  <div className="first-image-view">
+                    <Image src="../images/Rectangle480.png" />
+                  </div>
+                </Col>
+
+
+                <Col xs={24}>
+                  <div className="first-image-view2">
+                    <h4
+                      style={{ textAlign: "left", fontSize: "24px" }} // className="txt1"
+                    >
+                      Butterfly Creek
+                    </h4>
+                    <div style={{ textAlign: "left", fontSize: "16px", marginBottom: 8 }}>
+                      10 Tom Pearce Drive, Auckland Airport
+                    </div>
+                    <p style={{ textAlign: "left", fontSize: "11px" }}>
+                      Welcome and immerse yourself in our tropical butterfly house or
+                      travel back in time in Dinosaur Kindom when Dinosaurs Kindom
+                      when Dinosars ruled. Meet Scar and Goldie, NZ’s only salt water
+                      crocodiles.
+                    </p>
+                  </div>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col xs={24}>
+                <a className="hart-view" href="#" style={{ padding: 7 }}><img style={{width:'85%'}}  src={hart} alt="Logo" /></a>
+                </Col>
+                <Col xs={8}><a className="left-arrow" href="#" style={{     padding:' 4px 9px 4px 5px' }}><img  src={left_arrow} alt="Logo" /></a></Col>
+                <Col xs={8}></Col>
+                <Col xs={8}><a className="right-arrow" href="#" style={{    padding: "4px 1px 4px 5px"}}><img  src={right_arrow} alt="Logo" /></a></Col>
+              </Row>
+
+
+
+
+
             </Col>
           </Row>
           <Row>
-          <Col xs={24} xl={12}  style={{ paddingTop:'20%'}} >
+            <Col xs={24} xl={12} span={12}>
               {" "}
               <div
                 style={{

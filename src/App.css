@@ -201,7 +201,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 .setNav {
-  margin-right: 25%;
+  margin-right: 30%;
   margin-left: 25%;
 }
 .underline {
@@ -384,6 +384,57 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 11px;
     margin-top: 15px;
 }
+
+/* supun */
+.first-image-view{
+  padding:5px;
+}
+.first-image-view2{
+  padding: 2px 9px 18px 24px;
+}
+.hart-view{
+  display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color:#F9595F;
+    border-radius: 33px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+   
+}
+.left-arrow{
+  display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color:#119BFF;
+    border-radius: 33px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+   
+}
+.right-arrow{
+  display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color:#189722;
+    border-radius: 33px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+   
+}
+.side-row{
+  max-width: 95%;
+}
+/* supun */
 
 
 /* Aruna */
