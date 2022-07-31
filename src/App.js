@@ -20,10 +20,10 @@ function App() {
         </Row> */}
 
         <div class="container set-container">
-          <Row >
-            <Col span={15}> </Col>
-            <Col span={9}>
-              <Image src="../images/Rectangle480.png" />
+          <Row>
+          <Col xs={24} xl={15}  ></Col>
+          <Col xs={24} xl={9}  >
+              <img alt="480" src="../images/Rectangle480.png" class="img-fluid" />
               <h4
                 style={{ textAlign: "left", fontSize: "30px" }} // className="txt1"
               >
@@ -41,16 +41,16 @@ function App() {
             </Col>
           </Row>
           <Row>
-            <Col span={12}>
+          <Col xs={24} xl={12}  style={{ paddingTop:'20%'}} >
               {" "}
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: "45px",
-                  marginTop: 200,
+                  fontSize: "45px",                  
                   fontWeight: 700,
+                 
                 }}
-                // className="txt2"
+                
               >
                 Download the app to add places to save places you like
               </div>
@@ -65,16 +65,18 @@ function App() {
               <Button type="primary">App Store</Button>
             </Col>
 
-            <Col span={12}>
-              <img alt="41" src="../images/41.png" className="img2" />
+            <Col xs={24} xl={12}  className="iconHome1">
+              <img alt="41" src="../images/41.png" className="img2" class="img-fluid"/>
             </Col>
           </Row>
           <Row>
-            <Col span={12}>
-              <img alt="41" src="../images/16.png" className="img3" />
+          <Col xs={24} xl={12}  >
+              <img alt="41" src="../images/16.png" className="img3" class="img-fluid" />
             </Col>
-            <Col span={12}>
-              <div style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}>
+            <Col xs={24} xl={12}  >
+              <div
+                style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}
+              >
                 Short Title
               </div>
 
@@ -82,7 +84,63 @@ function App() {
                 style={{
                   textAlign: "left",
                   fontSize: "45px",
-                  
+
+                  fontWeight: 700,
+                }}
+              >
+                Description about app screen
+              </div>
+              <div style={{ textAlign: "left", fontSize: "25px" }}>
+                Explore places around your next adventure and add them to your
+                bucket list, Tempor incididunt utlabore et dolore magna aliqua.
+                Ut enim adminim veniam quis nostrud exercitation.
+              </div>
+            </Col>
+          </Row>
+          <Row>
+          <Col xs={24} xl={12}  >
+              <div
+                style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}
+              >
+                Short Title
+              </div>
+
+              <div
+                style={{
+                  textAlign: "left",
+                  fontSize: "45px",
+
+                  fontWeight: 700,
+                }}
+              >
+                Description about app screen
+              </div>
+              <div style={{ textAlign: "left", fontSize: "25px" }}>
+                Explore places around your next adventure and add them to your
+                bucket list, Tempor incididunt utlabore et dolore magna aliqua.
+                Ut enim adminim veniam quis nostrud exercitation.
+              </div>
+            </Col>
+            <Col xs={24} xl={12}  >
+              <img alt="41" src="../images/39.png" className="img3" class="img-fluid"/>
+            </Col>
+          </Row>
+          <Row>
+          <Col xs={24} xl={12}  >
+              <img alt="41" src="../images/23.png" className="img3" class="img-fluid" />
+            </Col>
+            <Col xs={24} xl={12}  >
+              <div
+                style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}
+              >
+                Short Title
+              </div>
+
+              <div
+                style={{
+                  textAlign: "left",
+                  fontSize: "45px",
+
                   fontWeight: 700,
                 }}
               >
@@ -96,7 +154,7 @@ function App() {
             </Col>
           </Row>
         </div>
-        <FooterWeb/>
+        <FooterWeb />
       </>
     </div>
   );
