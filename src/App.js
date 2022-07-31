@@ -19,10 +19,8 @@ function App() {
           </Col>
         </Row> */}
 
-        <div class="container">
-          <Row
-          // justify="center"
-          >
+        <div class="container set-container">
+          <Row >
             <Col span={15}> </Col>
             <Col span={9}>
               <Image src="../images/Rectangle480.png" />
