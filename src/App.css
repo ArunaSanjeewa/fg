@@ -431,6 +431,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     line-height: 35px;
    
 }
+.side-row{
+  max-width: 95%;
+}
 /* supun */
 
 

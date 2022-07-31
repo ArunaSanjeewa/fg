@@ -37,7 +37,7 @@ function App() {
 
             </Col>
             <Col xs={24} xl={8} span={9}>
-              <Row>
+              <Row className="side-row">
 
                 <Col xs={24}>
                   <InputGroup className="">
