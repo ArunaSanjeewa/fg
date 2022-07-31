@@ -17,9 +17,10 @@ import search_icon from '../src/assets/search icon.svg';
 
 
 
+
 function App() {
   return (
-    <div className="App">
+  <div className="App" >
       <>
         <NavBarWeb />
 
@@ -138,10 +139,12 @@ function App() {
                 places around your next adventure and add them to your bucket
                 list. Find the best services you need in your area in seconds.
               </p>
-              <Button type="primary" style={{ textAlign: "left" }}>
-                Google Play
-              </Button>
-              <Button type="primary">App Store</Button>
+              <button type="button" class="btn btn-outline-dark btn-lg" >
+              <b>Play Store</b></button>
+              
+              <button type="button" class="btn btn-outline-dark btn-lg">
+             
+                <b>App Store</b></button>
             </Col>
 
             <Col xs={24} xl={12} className="iconHome1">
