@@ -511,4 +511,20 @@ left: 257.03px;
 top: 2137.29px;
 
 }
+.iconHome1{
+  float: left;
+  /* border: 1px solid #73AD21; */
+  /* width: 50%; */
+  /* height: 200px; */
+  /* background-color: aqua; */
+  margin: 0;/*0 0 0 -7px*/
+  /*clear: left;*/
+}
+
+.centered-element {
+  /* margin: 0; */
+  /* position: absolute; */
+  top: 50%;
+  transform: translateY(-50%);
+}
 /* Aruna */
