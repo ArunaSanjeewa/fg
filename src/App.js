@@ -1,15 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "antd/dist/antd.css";
+
 import { Col, Row, Image, Button } from "antd";
 import React from "react";
 import NavBarWeb from "./Components/Navbar/NavBarWeb";
 import FooterWeb from "./Components/Footer/FooterWeb";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 function App() {
   return (
-    <div className="App">
+  <div className="App" >
       <>
         <NavBarWeb />
         <Row></Row>
@@ -59,10 +61,12 @@ function App() {
                 places around your next adventure and add them to your bucket
                 list. Find the best services you need in your area in seconds.
               </p>
-              <Button type="primary" style={{ textAlign: "left" }}>
-                Google Play
-              </Button>
-              <Button type="primary">App Store</Button>
+              <button type="button" class="btn btn-outline-dark btn-lg" >
+              <b>Play Store</b></button>
+              
+              <button type="button" class="btn btn-outline-dark btn-lg">
+             
+                <b>App Store</b></button>
             </Col>
 
             <Col xs={24} xl={12}  className="iconHome1">
