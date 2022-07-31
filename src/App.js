@@ -13,6 +13,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import hart from '../src/assets/hart.svg';
 import left_arrow from '../src/assets/left_arrow.svg';
 import right_arrow from '../src/assets/right_arrow.svg';
+import search_icon from '../src/assets/search icon.svg';
 
 
 
@@ -30,18 +31,38 @@ function App() {
         </Row> */}
 
         <div class="container set-container">
-          <Row >
+          <Row className="first-row" >
+            <div style={{ zIndex: 1000 }} class="fab mobile-only">
+              <Row style={{width:'100%'}}>
+                <InputGroup >
+                <InputGroup.Text style={{backgroundColor:'#ffffff'}}>
+                <img src={search_icon} alt="Logo" />
+                            </InputGroup.Text>
+                  <Form.Control
+
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon1"
+                  />
+                  
+                </InputGroup>
+              </Row>
+
+
+            </div>
             <Col xs={24} xl={15} span={15}>
+
               <MapView />
+
+
             </Col>
             <Col xs={24} xl={1} span={15}>
 
             </Col>
-            <Col xs={24} xl={8} span={9}>
-              <Row className="side-row">
+            <Col xs={24} xl={8} span={9} className="web-only">
+              <Row className="side-row web-only">
 
                 <Col xs={24}>
-                  <InputGroup className="">
+                  <InputGroup className="web-only">
 
                     <Form.Control
 
@@ -83,11 +104,11 @@ function App() {
 
               <Row>
                 <Col xs={24}>
-                <a className="hart-view" href="#" style={{ padding: 7 }}><img style={{width:'85%'}}  src={hart} alt="Logo" /></a>
+                  <a className="hart-view" href="#" style={{ padding: 7 }}><img style={{ width: '85%' }} src={hart} alt="Logo" /></a>
                 </Col>
-                <Col xs={8}><a className="left-arrow" href="#" style={{     padding:' 4px 9px 4px 5px' }}><img  src={left_arrow} alt="Logo" /></a></Col>
+                <Col xs={8}><a className="left-arrow" href="#" style={{ padding: ' 4px 9px 4px 5px' }}><img src={left_arrow} alt="Logo" /></a></Col>
                 <Col xs={8}></Col>
-                <Col xs={8}><a className="right-arrow" href="#" style={{    padding: "4px 1px 4px 5px"}}><img  src={right_arrow} alt="Logo" /></a></Col>
+                <Col xs={8}><a className="right-arrow" href="#" style={{ padding: "4px 1px 4px 5px" }}><img src={right_arrow} alt="Logo" /></a></Col>
               </Row>
 
 
@@ -102,11 +123,11 @@ function App() {
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: "45px",                  
+                  fontSize: "45px",
                   fontWeight: 700,
-                 
+
                 }}
-                
+
               >
                 Download the app to add places to save places you like
               </div>
@@ -123,12 +144,12 @@ function App() {
                 <b>App Store</b></button>
             </Col>
 
-            <Col xs={24} xl={12}  className="iconHome1">
-              <img alt="41" src="../images/41.png" className="img2" class="img-fluid"/>
+            <Col xs={24} xl={12} className="iconHome1">
+              <img alt="41" src="../images/41.png" className="img2" class="img-fluid" />
             </Col>
           </Row>
           <Row>
-          <Col xs={24} xl={12}  >
+            <Col xs={24} xl={12}  >
               <img alt="41" src="../images/16.png" className="img3" class="img-fluid" />
             </Col>
             <Col xs={24} xl={12}  >
@@ -156,7 +177,7 @@ function App() {
             </Col>
           </Row>
           <Row>
-          <Col xs={24} xl={12}  >
+            <Col xs={24} xl={12}  >
               <div
                 style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}
               >
@@ -180,11 +201,11 @@ function App() {
               </div>
             </Col>
             <Col xs={24} xl={12}  >
-              <img alt="41" src="../images/39.png" className="img3" class="img-fluid"/>
+              <img alt="41" src="../images/39.png" className="img3" class="img-fluid" />
             </Col>
           </Row>
           <Row>
-          <Col xs={24} xl={12}  >
+            <Col xs={24} xl={12}  >
               <img alt="41" src="../images/23.png" className="img3" class="img-fluid" />
             </Col>
             <Col xs={24} xl={12}  >

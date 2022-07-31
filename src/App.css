@@ -434,6 +434,53 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .side-row{
   max-width: 95%;
 }
+.first-row{
+  margin-bottom: 65px;
+}
+.mobile-only{
+  display:none !important;
+}
+@media (max-width: 767px) {
+
+  .web-only{
+    display:none !important;
+  }
+  .setNav {
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+  .side-row{
+    max-width: 100%;
+  }
+  .mobile-only{
+    display:block !important;
+  }
+}
+.search-bar-overlay {
+  z-index: 9;
+  margin: 30px;
+  background: #009938;
+}
+.fab{
+
+  width: 80%;
+  left: 10%;
+  font-size: 25px;
+  line-height: 70px;
+
+  text-align: center;
+  z-index: 1000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 27px 2px 0 0;
+  position: absolute;
+  transition: all 0.1s ease-in-out; 
+
+    /* right: 50px;
+    bottom: 50px; */
+    transition: all 0.1s ease-in-out;
+}
 /* supun */
 
 
