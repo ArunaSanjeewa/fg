@@ -16,7 +16,7 @@ function NavBarWeb() {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY >200) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -46,7 +46,7 @@ function NavBarWeb() {
           <Nav className="setNav">
           
             <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link underline' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Hidden Gems</Nav.Link>
-            <Nav.Link href="#link" className={activeLink === 'link' ? 'active navbar-link underline' : 'navbar-link'} onClick={() => onUpdateActiveLink('link')}>Planner</Nav.Link>
+            <Nav.Link href="#planner" className={activeLink === 'planner' ? 'active navbar-link underline' : 'navbar-link'} onClick={() => onUpdateActiveLink('planner')}>Planner</Nav.Link>
             <Nav.Link href="#deals" className={activeLink === 'deals' ? 'active navbar-link underline' : 'navbar-link'} onClick={() => onUpdateActiveLink('deals')}>Deals</Nav.Link>
            
             

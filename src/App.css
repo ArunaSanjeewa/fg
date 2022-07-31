@@ -42,7 +42,7 @@
 /************ Navbar Css ************/
 nav.navbar {
   padding: 0px 0;
-  position: sticky;
+  position:fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
@@ -462,7 +462,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #009938;
 }
 .fab{
-
+  top: 120px;
   width: 80%;
   left: 10%;
   font-size: 25px;
@@ -473,12 +473,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 27px 2px 0 0;
+  padding: 0px 0px 0 0;
   position: absolute;
   transition: all 0.1s ease-in-out; 
 
-    /* right: 50px;
-    bottom: 50px; */
+  border: 1px solid #DFDFDF;
+  box-shadow: 0px 10px 20px rgb(0 0 0 / 10%);
+  border-radius: 12px;
     transition: all 0.1s ease-in-out;
 }
 /* supun */

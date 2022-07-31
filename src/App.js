@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <>
         <NavBarWeb />
-        <Row></Row>
+
         {/* <Row>
           <Col span={8}>
             <Image src="../images/Rectangle480.png" />
@@ -30,7 +30,10 @@ function App() {
         </Row> */}
 
         <div class="container set-container">
-          <Row className="first-row" >
+       
+          <Row className="first-row" id="home" >
+          <Col xs={24} style={{height:60}}>
+        </Col>
             <div style={{ zIndex: 1000 }} class="fab mobile-only">
               <Row style={{width:'100%'}}>
                 <InputGroup >
@@ -116,7 +119,7 @@ function App() {
 
             </Col>
           </Row>
-          <Row>
+          <Row id="planner">
             <Col xs={24} xl={12} span={12}>
               {" "}
               <div
