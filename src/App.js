@@ -14,6 +14,8 @@ import hart from '../src/assets/hart.svg';
 import left_arrow from '../src/assets/left_arrow.svg';
 import right_arrow from '../src/assets/right_arrow.svg';
 import search_icon from '../src/assets/search icon.svg';
+import app_store from '../src/assets/app_store.svg';
+import google_play from '../src/assets/google-play1.svg';
 
 
 
@@ -139,12 +141,16 @@ function App() {
                 places around your next adventure and add them to your bucket
                 list. Find the best services you need in your area in seconds.
               </p>
-              <button type="button" class="btn btn-outline-dark btn-lg" >
-              <b>Play Store</b></button>
+              {/* <button type="button" class="btn btn-outline-dark btn-lg"  style={{margin: 3}}>
+              <img src={google_play} alt="Logo" /><b>Play Store</b></button>
               
-              <button type="button" class="btn btn-outline-dark btn-lg">
+              <button type="button" class="btn btn-outline-dark btn-lg" style={{margin: 3}}>
              
-                <b>App Store</b></button>
+              <img src={app_store} alt="Logo" />   <b>App Store</b></button> */}
+              <div class="icons">
+              <a className="downlod-icon" href="#" ><img style={{width: '18%'}} src={google_play} alt="Logo" />  Google Play</a>
+              <a className="downlod-icon" href="#"><img  style={{width: '18%'}}src={app_store} alt="Logo" /> App Store</a>
+            </div>
             </Col>
 
             <Col xs={24} xl={12} className="iconHome1">
