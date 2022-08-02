@@ -4,6 +4,22 @@
 .set-container{
   margin-top: 12px;
 }
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100% !important;
+
+}
+.map-view-web{
+  padding-left:9.6px; 
+}
+.map-view-col{
+  max-width: 59.5% !important;
+}
+.web-only-2{
+  padding-right: 42px;
+}
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -55,7 +71,7 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-  width: 9%;
+  width: 18%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #3f3f3f !important;
@@ -201,7 +217,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 .setNav {
-  margin-right: 30%;
+  margin-right: 25%;
   margin-left: 25%;
 }
 .underline {
@@ -516,6 +532,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .search_btn{
   background: #189722 !important;;
 }
+
 
 /* supun */
 

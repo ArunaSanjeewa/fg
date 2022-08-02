@@ -28,7 +28,7 @@ export default function MapView(){
   return (
     
     // Important! Always set the container height explicitlys
-    <div style={{ height: '90vh', width: '100%',borderRadius:25,overflow:'hidden' }}>
+    <div className="map-view-web" style={{ height: '100vh', width: '100%',borderRadius:25,overflow:'hidden'}}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyC7QjauaBLV9W__koQgy65PIuxYbcSPpfg" }}
         defaultCenter={defaultProps.center}

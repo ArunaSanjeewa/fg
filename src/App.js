@@ -58,11 +58,11 @@ function App() {
                 </InputGroup>
               </Row>
             </div>
-            <Col xs={24} xl={15} span={15}>
+            <Col xs={24} xl={15} span={15} className="map-view-col">
               <MapView />
             </Col>
             <Col xs={24} xl={1} span={15}></Col>
-            <Col xs={24} xl={8} span={9} className="web-only">
+            <Col xs={24} xl={8} span={9} className="web-only web-only-2">
               <Row className="side-row web-only">
                 <Col xs={24}>
                   {/* <InputGroup>
@@ -86,8 +86,8 @@ function App() {
                     <Form.Control className="search_input_style" aria-label="Dollar amount (with dot and two decimal places)" />
                     <Button className="search_btn" variant="success" style={{ fontSize: 13 }} id="button-addon1">
 
-Search
-</Button>
+                      Search
+                    </Button>
                   </InputGroup>
 
 
@@ -132,7 +132,7 @@ Search
                     <img style={{ width: "85%" }} src={hart} alt="Logo" />
                   </a>
                 </Col>
-                <Col xs={8}>
+                <Col xs={8} className="left-arrow-col">
                   <a
                     className="left-arrow"
                     href="#"
@@ -142,7 +142,7 @@ Search
                   </a>
                 </Col>
                 <Col xs={8}></Col>
-                <Col xs={8}>
+                <Col xs={8} className="right-arrow-col">
                   <a
                     className="right-arrow"
                     href="#"
@@ -186,7 +186,7 @@ Search
               <button type="button" class="btn btn-outline-dark btn-lg" style={{margin: 3}}>
              
               <img src={app_store} alt="Logo" />   <b>App Store</b></button> */}
-              <div class="icons" style={{paddingBlock:40}}>
+              <div class="icons" style={{ paddingBlock: 40 }}>
                 <a className="downlod-icon" href="#">
                   <img style={{ width: "18%" }} src={google_play} alt="Logo" />{" "}
                   <span style={{ fontFamily: "Outfit", fontWeight: 700 }}>
