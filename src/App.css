@@ -500,6 +500,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     text-align: center;
     line-height: 42px;
 }
+
+.left-arrow-col{
+  text-align: end;
+}
+.right-arrow-col{
+  text-align: left;
+}
+.search_icon_style{
+  background: white !important;
+}
+.search_input_style{
+  border-left-color: white !important;;
+}
+.search_btn{
+  background: #189722 !important;;
+}
+
 /* supun */
 
 

@@ -57,7 +57,7 @@ function NavBarWeb() {
           <Nav >
             
             <Nav.Link eventKey={2} href="#memes" >
-            <Button  variant="success" className='button-size'>Download </Button>{' '}
+            <Button  variant="success" className='button-size search_btn'>Download </Button>{' '}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
