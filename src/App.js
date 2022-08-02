@@ -26,7 +26,14 @@ function App() {
     <div className="App" >
       <>
         <NavBarWeb />
-
+        <link
+          href="http://fonts.cdnfonts.com/css/circular-std"
+          rel="stylesheet"
+        ></link>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Outfit"
+        ></link>
         {/* <Row>
           <Col span={8}>
             <Image src="../images/Rectangle480.png" />
@@ -45,38 +52,30 @@ function App() {
                     <img src={search_icon} alt="Logo" />
                   </InputGroup.Text>
                   <Form.Control
-
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon1"
                   />
-
                 </InputGroup>
               </Row>
-
-
             </div>
             <Col xs={24} xl={15} span={15}>
-
               <MapView />
-
-
             </Col>
-            <Col xs={24} xl={1} span={15}>
-
-            </Col>
+            <Col xs={24} xl={1} span={15}></Col>
             <Col xs={24} xl={8} span={9} className="web-only">
               <Row className="side-row web-only">
-
                 <Col xs={24}>
                   {/* <InputGroup>
 
                     <Form.Control
-
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon1"
                     />
-                    <Button variant="success" style={{ fontSize: 13 }} id="button-addon1">
-
+                    <Button
+                      variant="success"
+                      style={{ fontSize: 13 }}
+                      id="button-addon1"
+                    >
                       Search
                     </Button>
                   </InputGroup> */}
@@ -101,7 +100,6 @@ Search
                   </div>
                 </Col>
 
-
                 <Col xs={24}>
                   <div className="first-image-view2">
                     <h4
@@ -109,14 +107,20 @@ Search
                     >
                       Butterfly Creek
                     </h4>
-                    <div style={{ textAlign: "left", fontSize: "16px", marginBottom: 8 }}>
+                    <div
+                      style={{
+                        textAlign: "left",
+                        fontSize: "16px",
+                        marginBottom: 8,
+                      }}
+                    >
                       10 Tom Pearce Drive, Auckland Airport
                     </div>
                     <p style={{ textAlign: "left", fontSize: "11px" }}>
-                      Welcome and immerse yourself in our tropical butterfly house or
-                      travel back in time in Dinosaur Kindom when Dinosaurs Kindom
-                      when Dinosars ruled. Meet Scar and Goldie, NZ’s only salt water
-                      crocodiles.
+                      Welcome and immerse yourself in our tropical butterfly
+                      house or travel back in time in Dinosaur Kindom when
+                      Dinosaurs Kindom when Dinosars ruled. Meet Scar and
+                      Goldie, NZ’s only salt water crocodiles.
                     </p>
                   </div>
                 </Col>
@@ -124,34 +128,54 @@ Search
 
               <Row>
                 <Col xs={24}>
-                  <a className="hart-view" href="#" style={{ padding: 7 }}><img style={{ width: '85%' }} src={hart} alt="Logo" /></a>
+                  <a className="hart-view" href="#" style={{ padding: 7 }}>
+                    <img style={{ width: "85%" }} src={hart} alt="Logo" />
+                  </a>
                 </Col>
-                <Col className="left-arrow-col" xs={8}><a className="left-arrow" href="#" style={{ padding: ' 4px 9px 4px 5px' }}><img src={left_arrow} alt="Logo" /></a></Col>
+                <Col xs={8}>
+                  <a
+                    className="left-arrow"
+                    href="#"
+                    style={{ padding: " 4px 9px 4px 5px" }}
+                  >
+                    <img src={left_arrow} alt="Logo" />
+                  </a>
+                </Col>
                 <Col xs={8}></Col>
-                <Col className="right-arrow-col" xs={8}><a className="right-arrow" href="#" style={{ padding: "4px 1px 4px 5px" }}><img src={right_arrow} alt="Logo" /></a></Col>
+                <Col xs={8}>
+                  <a
+                    className="right-arrow"
+                    href="#"
+                    style={{ padding: "4px 1px 4px 5px" }}
+                  >
+                    <img src={right_arrow} alt="Logo" />
+                  </a>
+                </Col>
               </Row>
-
-
-
-
-
             </Col>
           </Row>
           <Row id="planner">
-            <Col xs={24} xl={12} span={12}>
+            <Col xs={24} xl={12} span={12} style={{ textAlign: "justify" }}>
               {" "}
               <div
                 style={{
                   textAlign: "left",
                   fontSize: "45px",
                   fontWeight: 700,
-
+                  fontFamily: "Circular Std",
                 }}
-
               >
                 Download the app to add places to save places you like
               </div>
-              <p style={{ textAlign: "left", fontSize: "25px" }}>
+              <p
+                style={{
+                  textAlign: "left",
+                  fontSize: "25px",
+                  color: "#515151",
+                  fontFamily: "Outfit",
+                  fontWeight: 400,
+                }}
+              >
                 Create your own bucket list for your next holiday & Explore
                 places around your next adventure and add them to your bucket
                 list. Find the best services you need in your area in seconds.
@@ -162,23 +186,56 @@ Search
               <button type="button" class="btn btn-outline-dark btn-lg" style={{margin: 3}}>
              
               <img src={app_store} alt="Logo" />   <b>App Store</b></button> */}
-              <div class="icons">
-                <a className="downlod-icon" href="#" ><img style={{ width: '18%' }} src={google_play} alt="Logo" />  Google Play</a>
-                <a className="downlod-icon" href="#"><img style={{ width: '18%' }} src={app_store} alt="Logo" /> App Store</a>
+              <div class="icons" style={{paddingBlock:40}}>
+                <a className="downlod-icon" href="#">
+                  <img style={{ width: "18%" }} src={google_play} alt="Logo" />{" "}
+                  <span style={{ fontFamily: "Outfit", fontWeight: 700 }}>
+                    Google Play
+                  </span>
+                </a>
+                <a className="downlod-icon" href="#">
+                  <img
+                    style={{
+                      width: "18%",
+                      fontFamily: "Outfit",
+                      fontWeight: 700,
+                    }}
+                    src={app_store}
+                    alt="Logo"
+                  />{" "}
+                  <span style={{ fontFamily: "Outfit", fontWeight: 700 }}>
+                    App Store
+                  </span>
+                </a>
               </div>
             </Col>
 
             <Col xs={24} xl={12} className="iconHome1">
-              <img alt="41" src="../images/41.png" className="img2" class="img-fluid" />
+              <img
+                alt="41"
+                src="../images/41.png"
+                className="img2"
+                class="img-fluid"
+              />
             </Col>
           </Row>
           <Row>
-            <Col xs={24} xl={12}  >
-              <img alt="41" src="../images/16.png" className="img3" class="img-fluid" />
+            <Col xs={24} xl={12}>
+              <img
+                alt="41"
+                src="../images/16.png"
+                className="img3"
+                class="img-fluid"
+              />
             </Col>
-            <Col xs={24} xl={12}  >
+            <Col xs={24} xl={12}>
               <div
-                style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}
+                style={{
+                  textAlign: "left",
+                  fontSize: "25px",
+                  marginTop: 300,
+                  color: "#41AF4B",
+                }}
               >
                 Short Title
               </div>
@@ -189,11 +246,20 @@ Search
                   fontSize: "45px",
 
                   fontWeight: 700,
+                  fontFamily: "Circular Std",
                 }}
               >
                 Description about app screen
               </div>
-              <div style={{ textAlign: "left", fontSize: "25px" }}>
+              <div
+                style={{
+                  textAlign: "left",
+                  fontSize: "25px",
+                  color: "#515151",
+                  fontFamily: "Outfit",
+                  fontWeight: 400,
+                }}
+              >
                 Explore places around your next adventure and add them to your
                 bucket list, Tempor incididunt utlabore et dolore magna aliqua.
                 Ut enim adminim veniam quis nostrud exercitation.
@@ -201,9 +267,14 @@ Search
             </Col>
           </Row>
           <Row>
-            <Col xs={24} xl={12}  >
+            <Col xs={24} xl={12}>
               <div
-                style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}
+                style={{
+                  textAlign: "left",
+                  fontSize: "25px",
+                  marginTop: 300,
+                  color: "#41AF4B",
+                }}
               >
                 Short Title
               </div>
@@ -212,29 +283,52 @@ Search
                 style={{
                   textAlign: "left",
                   fontSize: "45px",
-
+                  fontFamily: "Circular Std",
                   fontWeight: 700,
                 }}
               >
                 Description about app screen
               </div>
-              <div style={{ textAlign: "left", fontSize: "25px" }}>
+              <div
+                style={{
+                  textAlign: "left",
+                  fontSize: "25px",
+                  color: "#515151",
+                  fontFamily: "Outfit",
+                  fontWeight: 400,
+                }}
+              >
                 Explore places around your next adventure and add them to your
                 bucket list, Tempor incididunt utlabore et dolore magna aliqua.
                 Ut enim adminim veniam quis nostrud exercitation.
               </div>
             </Col>
-            <Col xs={24} xl={12}  >
-              <img alt="41" src="../images/39.png" className="img3" class="img-fluid" />
+            <Col xs={24} xl={12}>
+              <img
+                alt="41"
+                src="../images/39.png"
+                className="img3"
+                class="img-fluid"
+              />
             </Col>
           </Row>
           <Row>
-            <Col xs={24} xl={12}  >
-              <img alt="41" src="../images/23.png" className="img3" class="img-fluid" />
+            <Col xs={24} xl={12}>
+              <img
+                alt="41"
+                src="../images/23.png"
+                className="img3"
+                class="img-fluid"
+              />
             </Col>
-            <Col xs={24} xl={12}  >
+            <Col xs={24} xl={12}>
               <div
-                style={{ textAlign: "left", fontSize: "25px", marginTop: 300 }}
+                style={{
+                  textAlign: "left",
+                  fontSize: "25px",
+                  marginTop: 300,
+                  color: "#41AF4B",
+                }}
               >
                 Short Title
               </div>
@@ -249,7 +343,15 @@ Search
               >
                 Description about app screen
               </div>
-              <div style={{ textAlign: "left", fontSize: "25px" }}>
+              <div
+                style={{
+                  textAlign: "left",
+                  fontSize: "25px",
+                  color: "#515151",
+                  fontFamily: "Outfit",
+                  fontWeight: 400,
+                }}
+              >
                 Explore places around your next adventure and add them to your
                 bucket list, Tempor incididunt utlabore et dolore magna aliqua.
                 Ut enim adminim veniam quis nostrud exercitation.
