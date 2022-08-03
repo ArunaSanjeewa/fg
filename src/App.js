@@ -7,21 +7,29 @@ import NavBarWeb from "./Components/Navbar/NavBarWeb";
 import FooterWeb from "./Components/Footer/FooterWeb";
 import MapView from "./Components/Map/MapView";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import { Input } from "semantic-ui-react";
-import hart from "../src/assets/hart.svg";
-import left_arrow from "../src/assets/left_arrow.svg";
-import right_arrow from "../src/assets/right_arrow.svg";
-import search_icon from "../src/assets/search icon.svg";
-import app_store from "../src/assets/app_store.svg";
-import google_play from "../src/assets/google-play1.svg";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import { Input } from 'semantic-ui-react'
+import hart from '../src/assets/hart.svg';
+import left_arrow from '../src/assets/left_arrow.svg';
+import right_arrow from '../src/assets/right_arrow.svg';
+import search_icon from '../src/assets/search icon.svg';
+import app_store from '../src/assets/app_store.svg';
+import google_play from '../src/assets/google-play1.svg';
+import downlod_home from '../src/assets/downlod_home.svg';
+import downlod_tag from '../src/assets/downlod-tag.svg';
+import downlod_plnner from '../src/assets/downlod-plnner.svg';
+import downlod_close from '../src/assets/downlod-close.svg';
+import downlod from '../src/assets/downlod.svg';
 
-import axios from "axios";
+import axios from 'axios';
+
 
 function App() {
+
   const [apiArray, setapiArray] = useState([]);
+  const [isShown, setIsShown] = useState(true);
   useEffect(() => {
     (async () => {
       try {
@@ -33,14 +41,22 @@ function App() {
       } catch (error) {
         console.log(error);
       } finally {
+
       }
     })();
   }, []);
+  const handleDwonlodCloseClick = (e) => {
+    setIsShown(e);
+  }
+  const handleDwonlodClick = (e) => {
+    console.log(e);
+    setIsShown(e);
+  };
 
   return (
     <div className="App">
       <>
-        <NavBarWeb />
+        <NavBarWeb parentCallback={handleDwonlodClick} />
         <link
           href="http://fonts.cdnfonts.com/css/circular-std"
           rel="stylesheet"
@@ -72,10 +88,11 @@ function App() {
               </Row>
             </div>
             <Col xs={24} xl={15} span={15} className="map-view-col">
-              {apiArray.length > 0 ? <MapView details={{ apiArray }} /> : ""}
+              {apiArray.length > 0 ? (<MapView details={{ apiArray }} />) : ('')}
+
             </Col>
             <Col xs={24} xl={1} span={15}></Col>
-            <Col xs={24} xl={8} span={9} className="web-only web-only-2">
+            <Col xs={24} xl={8} span={9} className="web-only web-only-2" style={{ display: isShown ? 'block' : 'none' }}>
               <Row className="side-row web-only">
                 <Col xs={24}>
                   {/* <InputGroup>
@@ -169,6 +186,143 @@ function App() {
                     <img src={right_arrow} alt="Logo" />
                   </a>
                 </Col>
+              </Row>
+            </Col>
+            <Col xs={24} xl={8} span={9} className="web-only web-only-2" style={{ display: isShown ? 'none' : 'block' }}>
+
+              <div style={{ zIndex: 1000 }} class="fab2">
+                <a onClick={(e) => {
+                  handleDwonlodCloseClick(true);
+                }} style={{ padding: '0px 4px 11px 6px' }} >
+                  <img src={downlod_close} alt="Logo" />
+                </a>
+
+
+
+
+              </div>
+              <Row className="side-row web-only">
+                <Col xs={24} className="first-image-view">
+                  <div className="first-image-view">
+                    <Image src="../images/downlod.svg" />
+                  </div>
+                </Col>
+
+                <Col xs={24}>
+                  <div className="first-image-view2">
+                    <h4
+                      style={{ textAlign: "center", fontSize: "20px" }} // className="txt1"
+                    >
+                      Download the app to add places to save places you like
+                    </h4>
+
+
+                  </div>
+                </Col>
+              </Row>
+
+              <Row className="fist-row-set">
+
+                <Col xs={8} >
+                  <a
+                    className="find-awesome-places-icon"
+                    href="#"
+                    style={{ padding: "18px 4px 11px 5px" }}
+                  >
+                    <img src={downlod_home} alt="Logo" />
+                  </a>
+                </Col>
+                <Col xs={8} style={{ display: 'flex', justifyContent: 'center' }}>
+
+                  <a
+                    className="add-to-planner-icon"
+                    href="#"
+                    style={{ padding: "5px 5px 5px 5px", position: 'absolute', bottom: 0 }}
+                  >
+                    <img src={downlod_plnner} alt="Logo" />
+                  </a>
+                </Col>
+                <Col xs={8} >
+                  <a
+                    className="save-with-coupons-icon"
+                    href="#"
+                    style={{ padding: "18px 4px 11px 5px" }}
+                  >
+                    <img src={downlod_tag} alt="Logo" />
+                  </a>
+                </Col>
+              </Row>
+              <Row className="second-row-set">
+
+                <Col xs={8} >
+                  <a
+                    className="find-awesome-places-icon2"
+                    href="#"
+                    style={{ padding: " 4px 9px 4px 5px" }}
+                  >
+
+                  </a>
+                </Col>
+                <Col xs={8} style={{ display: 'flex', justifyContent: 'center' }}>
+
+                  <a
+                    className="add-to-planner-icon2"
+                    href="#"
+                    style={{ padding: "4px 1px 4px 5px", position: 'absolute', bottom: 0 }}
+                  >
+
+                  </a>
+                </Col>
+                <Col xs={8} >
+                  <a
+                    className="save-with-coupons-icon2"
+                    href="#"
+                    style={{ padding: "4px 1px 4px 5px" }}
+                  >
+
+                  </a>
+                </Col>
+              </Row>
+              <Row style={{ paddingTop: 17 }} >
+
+                <Col xs={8} className="downlod-font-row" >
+
+
+                  Find awesome places
+
+                </Col>
+                <Col xs={8} className="downlod-font-row" >
+
+                  Add to Planner
+
+                </Col>
+                <Col xs={8} className="downlod-font-row"  >
+                  Save with coupons
+                </Col>
+              </Row>
+              <Row>
+                <div class="icons" style={{ paddingBlock: 40 }}>
+                  <a className="downlod-icon-1" href="#">
+                    <img style={{ width: "18%" }} src={google_play} alt="Logo" />{" "}
+                    <span style={{ fontFamily: "Outfit", fontWeight: 700 }}>
+                      Google Play
+                    </span>
+                  </a>
+                  <a className="downlod-icon-1" href="#">
+                    <img
+                      style={{
+                        width: "18%",
+                        fontFamily: "Outfit",
+                        fontWeight: 700,
+                      }}
+                      src={app_store}
+                      alt="Logo"
+                    />{" "}
+                    <span style={{ fontFamily: "Outfit", fontWeight: 700 }}>
+                      App Store
+                    </span>
+                  </a>
+                </div>
               </Row>
             </Col>
           </Row>

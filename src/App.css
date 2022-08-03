@@ -455,7 +455,91 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   line-height: 35px;
 }
-.side-row {
+.save-with-coupons-icon{
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  cursor: pointer;
+  background-color:#1AA125;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+}
+.save-with-coupons-icon2{
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  cursor: pointer;
+  background-color:#D8FFDB;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+}
+.find-awesome-places-icon{
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  cursor: pointer;
+  background-color:#FE9331;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+}
+.find-awesome-places-icon2{
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  cursor: pointer;
+  background-color:#FFEFE0;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+}
+.add-to-planner-icon2{
+  display: inline-block;
+  width:78px;
+  height: 78px;
+  cursor: pointer;
+  background-color:#D8ECFF;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+}
+.add-to-planner-icon{
+  display: inline-block;
+  width: 57px;
+  height: 57px;
+  cursor: pointer;
+  background-color:#0085FF;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+}
+.downlod-font-row{    
+  font-size: 14px;
+  font-family: 'Outfit';
+
+}
+.fist-row-set{
+  position: inherit;
+    z-index: 9998;
+}
+.second-row-set{
+  margin-top: -53px;
+}
+.side-row{
   max-width: 95%;
 }
 .first-row {
@@ -484,7 +568,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 30px;
   background: #009938;
 }
-.fab {
+.fab2{
+  right: 61px;
+  width: 30px;
+    height: 30px;
+    background-color: #F3F3F3;
+    border-radius:21px;
+   
+    font-size: 25px;
+    line-height: 70px;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 2px 0 0;
+    position: absolute;
+
+    transition: all 0.1s ease-in-out;
+}
+.fab{
   top: 120px;
   width: 80%;
   left: 10%;
@@ -504,6 +608,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-shadow: 0px 10px 20px rgb(0 0 0 / 10%);
   border-radius: 12px;
   transition: all 0.1s ease-in-out;
+}
+.downlod-icon-1 {
+  display: inline-block;
+  text-decoration: none;
+  /* width: 50px; */
+  width: 145px;
+  margin: 21px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-radius: 33px;
+  border-radius: 11.1102px;
+  border: 0.840679px solid #273137;
+  font-size: 17px;
+  color: #273137;
+  line-height: 42px;
 }
 
 .downlod-icon {

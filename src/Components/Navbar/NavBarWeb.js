@@ -10,7 +10,11 @@ import {
 } from "react-router-dom";
 
 
-function NavBarWeb() {
+function NavBarWeb(props) {
+  const handleDwonlodClick = (e)=> {
+    props.parentCallback(e);
+  };
+  
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -56,8 +60,10 @@ function NavBarWeb() {
           </Nav> */}
           <Nav >
             
-            <Nav.Link eventKey={2} href="#memes" >
-            <Button  variant="success" className='button-size search_btn'>Download </Button>{' '}
+            <Nav.Link eventKey={2} >
+            <Button  onClick={(e) => {
+          handleDwonlodClick(false);
+        }} variant="success" className='button-size search_btn'>Download </Button>{' '}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
