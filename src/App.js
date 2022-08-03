@@ -46,22 +46,24 @@ function App() {
     
     navigator.geolocation.getCurrentPosition(function(position) {
     
-     // Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
-      Geocode.fromLatLng(-35.3810867,174.0588784).then(
+      Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
+     // Geocode.fromLatLng(-35.3810867,174.0588784).then(
+      
         (response) => {
           const address = response.results[0].formatted_address;
-
+          const selectLat=position.coords.latitude;
+          const selectLng=position.coords.longitude;
           console.log(address);
           setIsSearch(address);
           var setValue={
-            lat: -35.3810867,
-            lng: 174.0588784
+            lat: selectLat,
+            lng: selectLng
           }
           setIsDefualtAddrers(setValue);
           (async () => {
       try {
         const response = await axios.get(
-          "http://ec2-13-211-131-132.ap-southeast-2.compute.amazonaws.com:3000/api/search?lat=-35.3810867&lng=174.0588784&radius=1000&showCoupons=false&categories=adventure^financial_services^relax&id=sudesh_android_1235"
+          "http://ec2-13-211-131-132.ap-southeast-2.compute.amazonaws.com:3000/api/search?lat="+selectLat+"&lng="+selectLng+"&radius=1000&showCoupons=false&categories=adventure^financial_services^relax&id=sudesh_android_1235"
         );
         setapiArray(response.data.data);
         console.log(response.data.data);
@@ -88,7 +90,7 @@ function App() {
   const handleRightArrowClick = (e) => {
 
     console.log(apiArray.length)
-    if(apiArray.length>iscout){
+    if(apiArray.length-1>iscout){
       
       setIscout(iscout+1)
     }
@@ -217,7 +219,9 @@ function App() {
 
               <Row>
                 <Col xs={24}>
-                  <a className="hart-view" href="#" style={{ padding: 7 }}>
+                  <a onClick={(e) => {
+                  handleDwonlodCloseClick(false);
+                }}  className="hart-view" href="#" style={{ padding: 7 }}>
                     <img style={{ width: "85%" }} src={hart} alt="Logo" />
                   </a>
                 </Col>
@@ -251,7 +255,8 @@ function App() {
               <div style={{ zIndex: 1000 }} class="fab2">
                 <a onClick={(e) => {
                   handleDwonlodCloseClick(true);
-                }} style={{ padding: '0px 4px 11px 6px' }} >
+                }} 
+                style={{ padding: '0px 4px 11px 6px' }} >
                   <img src={downlod_close} alt="Logo" />
                 </a>
 
@@ -385,7 +390,7 @@ function App() {
             </Col>
           </Row>
           <Row id="planner" className="r1container">
-            <Col xs={24} xl={12} span={12} style={{ textAlign: "justify" }} className="down">
+            <Col xs={24} xl={12} span={14} style={{ textAlign: "justify" }} className="down">
               {" "}
               <div
                 style={{
@@ -400,7 +405,7 @@ function App() {
               <p
                 style={{
                   textAlign: "left",
-                  fontSize: "25px",
+                  fontSize: "20px",
                   color: "#515151",
                   fontFamily: "Outfit",
                   fontWeight: 400,
@@ -454,7 +459,7 @@ function App() {
             </Col>
           </Row>
           <Row className="r3container">
-            <Col xs={24} xl={12}>
+            <Col xs={24} xl={10}  style={{textAlign: "initial"}}>
               <img
                 alt="41"
                 src="../images/16.png"
@@ -463,11 +468,11 @@ function App() {
                 style={{ height:650,padding:0}}
               />
             </Col>
-            <Col xs={24} xl={12}>
+            <Col xs={24} xl={14}>
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: "25px",
+                  fontSize: "20px",
                   marginTop: 270,
                   color: "#41AF4B",
                 }}
@@ -489,7 +494,7 @@ function App() {
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: "25px",
+                  fontSize: "20px",
                   color: "#515151",
                   fontFamily: "Outfit",
                   fontWeight: 400,
@@ -501,12 +506,12 @@ function App() {
               </div>
             </Col>
           </Row>
-          <Row className="r3container">
-            <Col xs={24} xl={12}>
+          <Row className="r4container" >
+            <Col xs={24} xl={14}>
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: "25px",
+                  fontSize: "20px",
                   marginTop: 300,
                   color: "#41AF4B",
                 }}
@@ -527,7 +532,7 @@ function App() {
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: "25px",
+                  fontSize: "20px",
                   color: "#515151",
                   fontFamily: "Outfit",
                   fontWeight: 400,
@@ -538,7 +543,7 @@ function App() {
                 Ut enim adminim veniam quis nostrud exercitation.
               </div>
             </Col>
-            <Col xs={24} xl={12}>
+            <Col xs={24} xl={10} style={{textAlign: "end"}}>
               <img
                 alt="41"
                 src="../images/39.png"
@@ -548,9 +553,9 @@ function App() {
               />
             </Col>
           </Row>
-          <Row>
-            <Col xs={24} xl={12}>
-              <img
+          <Row className="r3container">
+            <Col xs={24} xl={10}  style={{textAlign: "initial"}}>
+            <img
                 alt="41"
                 src="../images/23.png"
                 className="img3"
@@ -558,11 +563,11 @@ function App() {
                 style={{ height:650,padding:0}}
               />
             </Col>
-            <Col xs={24} xl={12}>
+            <Col xs={24} xl={14}>
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: "25px",
+                  fontSize: "20px",
                   marginTop: 270,
                   color: "#41AF4B",
                 }}
@@ -575,7 +580,8 @@ function App() {
                   textAlign: "left",
                   fontSize: "45px",
 
-                  fontWeight: 700,
+                  fontWeight: 900,
+                  fontFamily: "Circular Std",
                 }}
               >
                 Description about app screen
@@ -583,7 +589,7 @@ function App() {
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: "25px",
+                  fontSize: "20px",
                   color: "#515151",
                   fontFamily: "Outfit",
                   fontWeight: 400,
@@ -595,6 +601,7 @@ function App() {
               </div>
             </Col>
           </Row>
+          
         </div>
         <FooterWeb />
       </>
