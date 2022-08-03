@@ -24,14 +24,41 @@ import downlod_close from '../src/assets/downlod-close.svg';
 import downlod from '../src/assets/downlod.svg';
 
 import axios from 'axios';
+import Geocode from "react-geocode";
 
-
+Geocode.setApiKey("AIzaSyC7QjauaBLV9W__koQgy65PIuxYbcSPpfg");
+Geocode.setLanguage("en");
+Geocode.setRegion("es");
+Geocode.setLocationType("ROOFTOP");
+Geocode.enableDebug();
 function App() {
+
+  
 
   const [apiArray, setapiArray] = useState([]);
   const [isShown, setIsShown] = useState(true);
+  const [iscout, setIscout] = useState(0);
+  const [isSearch, setIsSearch] = useState('');
+  const [isDefualtAddrers, setIsDefualtAddrers] = useState([]);
+ 
+
   useEffect(() => {
-    (async () => {
+    
+    navigator.geolocation.getCurrentPosition(function(position) {
+    
+     // Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
+      Geocode.fromLatLng(-35.3810867,174.0588784).then(
+        (response) => {
+          const address = response.results[0].formatted_address;
+
+          console.log(address);
+          setIsSearch(address);
+          var setValue={
+            lat: -35.3810867,
+            lng: 174.0588784
+          }
+          setIsDefualtAddrers(setValue);
+          (async () => {
       try {
         const response = await axios.get(
           "http://ec2-13-211-131-132.ap-southeast-2.compute.amazonaws.com:3000/api/search?lat=-35.3810867&lng=174.0588784&radius=1000&showCoupons=false&categories=adventure^financial_services^relax&id=sudesh_android_1235"
@@ -44,7 +71,28 @@ function App() {
 
       }
     })();
+
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    });
   }, []);
+  const handleLeftArrowClick = (e) => {
+    console.log(e);
+    if(iscout>0){
+      setIscout(iscout-1)
+    }
+  }
+  const handleRightArrowClick = (e) => {
+
+    console.log(apiArray.length)
+    if(apiArray.length>iscout){
+      
+      setIscout(iscout+1)
+    }
+  }
   const handleDwonlodCloseClick = (e) => {
     setIsShown(e);
   }
@@ -52,7 +100,12 @@ function App() {
     console.log(e);
     setIsShown(e);
   };
+  handleNoOfPhases = handleNoOfPhases.bind(this);
 
+  function  handleNoOfPhases(e) {
+    console.log(e)
+    this.setState({ noOfPhases: e });
+}
   return (
     <div className="App">
       <>
@@ -88,7 +141,7 @@ function App() {
               </Row>
             </div>
             <Col xs={24} xl={15} span={15} className="map-view-col">
-              {apiArray.length > 0 ? (<MapView details={{ apiArray }} />) : ('')}
+              {apiArray.length > 0 ? (<MapView details={{ apiArray }} defualt={{isDefualtAddrers}} />) : ('')}
 
             </Col>
             <Col xs={24} xl={1} span={15}></Col>
@@ -118,6 +171,10 @@ function App() {
                     <Form.Control
                       className="search_input_style"
                       aria-label="Dollar amount (with dot and two decimal places)"
+                      defaultValue={isSearch}
+                    //s  value={isSearch}
+                      onChange={handleNoOfPhases}
+                      style={{fontSize:11,padding: 0}}
                     />
                     <Button
                       className="search_btn"
@@ -131,7 +188,7 @@ function App() {
                 </Col>
                 <Col xs={24} className="first-image-view">
                   <div className="first-image-view">
-                    <Image src="../images/Rectangle480.png" />
+                    <Image src={apiArray[iscout]?.logo} />
                   </div>
                 </Col>
 
@@ -140,7 +197,7 @@ function App() {
                     <h4
                       style={{ textAlign: "left", fontSize: "24px" }} // className="txt1"
                     >
-                      Butterfly Creek
+                      {apiArray[iscout]?.name}
                     </h4>
                     <div
                       style={{
@@ -149,13 +206,10 @@ function App() {
                         marginBottom: 8,
                       }}
                     >
-                      10 Tom Pearce Drive, Auckland Airport
+                     {apiArray[iscout]?.address}
                     </div>
                     <p style={{ textAlign: "left", fontSize: "11px" }}>
-                      Welcome and immerse yourself in our tropical butterfly
-                      house or travel back in time in Dinosaur Kindom when
-                      Dinosaurs Kindom when Dinosars ruled. Meet Scar and
-                      Goldie, NZ’s only salt water crocodiles.
+                    {apiArray[iscout]?.description}
                     </p>
                   </div>
                 </Col>
@@ -170,7 +224,9 @@ function App() {
                 <Col xs={8} className="left-arrow-col">
                   <a
                     className="left-arrow"
-                    href="#"
+                    onClick={(e) => {
+                      handleLeftArrowClick(false);
+                    }}
                     style={{ padding: " 4px 9px 4px 5px" }}
                   >
                     <img src={left_arrow} alt="Logo" />
@@ -180,7 +236,9 @@ function App() {
                 <Col xs={8} className="right-arrow-col">
                   <a
                     className="right-arrow"
-                    href="#"
+                    onClick={(e) => {
+                      handleRightArrowClick(false);
+                    }}
                     style={{ padding: "4px 1px 4px 5px" }}
                   >
                     <img src={right_arrow} alt="Logo" />
