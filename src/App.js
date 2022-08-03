@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import "antd/dist/antd.css";
 import { Col, Row, Image } from "antd";
-import React from "react";
+import { useState,useEffect } from "react";
 import NavBarWeb from "./Components/Navbar/NavBarWeb";
 import FooterWeb from "./Components/Footer/FooterWeb";
 import MapView from "./Components/Map/MapView";
@@ -18,10 +18,27 @@ import search_icon from '../src/assets/search icon.svg';
 import app_store from '../src/assets/app_store.svg';
 import google_play from '../src/assets/google-play1.svg';
 
-
+import axios from 'axios';
 
 
 function App() {
+  const [apiArray, setapiArray] = useState([]);
+  useEffect(() => {
+    
+    (async () => {
+      
+      try {
+        const response = await axios.get('http://ec2-13-211-131-132.ap-southeast-2.compute.amazonaws.com:3000/api/search?lat=-35.3810867&lng=174.0588784&radius=1000&showCoupons=false&categories=adventure^financial_services^relax&id=sudesh_android_1235');
+        setapiArray(response.data.data);
+        console.log(response.data.data)
+      } catch (error) {
+        console.log(error);
+      } finally {
+       
+      }
+    })();
+  }, []);
+ 
   return (
     <div className="App" >
       <>
@@ -43,7 +60,7 @@ function App() {
         <div class="container set-container">
 
           <Row className="first-row" id="home" >
-            <Col xs={24} style={{ height: 60 }}>
+            <Col xs={24} style={{ height: 63 }}>
             </Col>
             <div style={{ zIndex: 1000 }} class="fab mobile-only">
               <Row style={{ width: '100%' }}>
@@ -59,7 +76,8 @@ function App() {
               </Row>
             </div>
             <Col xs={24} xl={15} span={15} className="map-view-col">
-              <MapView />
+              {apiArray.length>0?(<MapView details={{apiArray}}/>):('')}
+              
             </Col>
             <Col xs={24} xl={1} span={15}></Col>
             <Col xs={24} xl={8} span={9} className="web-only web-only-2">
@@ -89,7 +107,6 @@ function App() {
                       Search
                     </Button>
                   </InputGroup>
-
 
 
 
