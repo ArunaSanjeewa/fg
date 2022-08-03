@@ -173,13 +173,13 @@ function App() {
             </Col>
           </Row>
           <Row id="planner" className="r1container">
-            <Col xs={24} xl={12} span={12} style={{ textAlign: "justify" }}>
+            <Col xs={24} xl={12} span={12} style={{ textAlign: "justify" }} className="down">
               {" "}
               <div
                 style={{
                   textAlign: "left",
                   fontSize: "45px",
-                  fontWeight: 700,
+                  fontWeight: 900,
                   fontFamily: "Circular Std",
                 }}
               >
@@ -217,6 +217,7 @@ function App() {
                       width: "18%",
                       fontFamily: "Outfit",
                       fontWeight: 700,
+                     
                     }}
                     src={app_store}
                     alt="Logo"
@@ -231,19 +232,23 @@ function App() {
             <Col xs={24} xl={12} className="iconHome1">
               <img
                 alt="41"
+                style={{ height:650,padding:0}}
                 src="../images/41.png"
                 className="img2"
                 class="img-fluid"
+                
+                
               />
             </Col>
           </Row>
-          <Row>
+          <Row className="r3container">
             <Col xs={24} xl={12}>
               <img
                 alt="41"
                 src="../images/16.png"
                 className="img3"
                 class="img-fluid"
+                style={{ height:650,padding:0}}
               />
             </Col>
             <Col xs={24} xl={12}>
@@ -251,7 +256,7 @@ function App() {
                 style={{
                   textAlign: "left",
                   fontSize: "25px",
-                  marginTop: 300,
+                  marginTop: 270,
                   color: "#41AF4B",
                 }}
               >
@@ -263,7 +268,7 @@ function App() {
                   textAlign: "left",
                   fontSize: "45px",
 
-                  fontWeight: 700,
+                  fontWeight: 900,
                   fontFamily: "Circular Std",
                 }}
               >
@@ -327,6 +332,7 @@ function App() {
                 src="../images/39.png"
                 className="img3"
                 class="img-fluid"
+                style={{ height:650,padding:0}}
               />
             </Col>
           </Row>
@@ -337,6 +343,7 @@ function App() {
                 src="../images/23.png"
                 className="img3"
                 class="img-fluid"
+                style={{ height:650,padding:0}}
               />
             </Col>
             <Col xs={24} xl={12}>
@@ -344,7 +351,7 @@ function App() {
                 style={{
                   textAlign: "left",
                   fontSize: "25px",
-                  marginTop: 300,
+                  marginTop: 270,
                   color: "#41AF4B",
                 }}
               >
